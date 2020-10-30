@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine
 EXPOSE 8292
-ADD target/SpringBootProjects.jar SpringBootProjects.jar
-ENTRYPOINT ["java","-jar","/SpringBootProjects.jar"]
+COPY --from=build /target/MyFirstWebApp.war MyFirstWebApp.war
+ADD target/MyFirstWebApp.jar MyFirstWebApp.jar
+ENTRYPOINT ["java","-jar","/MyFirstWebApp.jar"]
