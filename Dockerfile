@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-jdk-alpine
 EXPOSE 8292
-ADD target/MyFirstWebApp.war MyFirstWebApp.war
-ENTRYPOINT ["java","-jar","/MyFirstWebApp.war"]
+ADD target/springmvcapp1.jar springmvcapp1.jar
+ENTRYPOINT ["java","-jar","/springmvcapp1.jar"]
